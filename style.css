@@ -11,6 +11,7 @@
 body{
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-family: 'Oswald', sans-serif;
+    transition: background-color 0.5s;
 }
 
 .container{
@@ -169,6 +170,7 @@ box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
 }
 
 .btn{
+    
     width: 20px;
     height: 20px;
     position: absolute;
@@ -195,6 +197,28 @@ box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
 .blue{
     color: #3A7CFD;
 }
+
+.dark{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.dark-list {
+    background-color: #25273D;;
+    color: #C8CBE7; 
+    border-radius: 5px;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+ }
+.dark-cont{
+    background-color: #171823;
+}
+.dark-task{
+    color:#C8CBE7;
+}
+
+
 
 @media (width < 500px){
 

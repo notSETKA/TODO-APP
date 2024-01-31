@@ -66,21 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
         updateTasksLeft();
     }
 
-    function toggleTask(img, btn) {
-        if (img.src.includes('unchecked.svg')) {
-            img.src = './img/Group 4 (1).svg';
-            btn.style.display = 'none';
-           
-            img.nextElementSibling.style.color = '#D1D2DA';
-            img.nextElementSibling.style.textDecorationLine = 'line-through';
-        } else {
-            img.src = './img/unchecked.svg';
-            btn.style.display = 'inline-block';
-            
-            img.nextElementSibling.style.color = '';
-            img.nextElementSibling.style.textDecorationLine = '';
-        }
-    }
 
     function toggleTask(img, btn) {
         img.src = (img.src.includes('unchecked.svg')) ? './img/Group 4 (1).svg' : './img/unchecked.svg';
@@ -91,5 +76,19 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.key === 'Enter') {
             addTask();
         }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const darkModeButton = document.getElementById('darkModeBtn');
+    const todoList = document.getElementById('taskList');
+    const container = document.querySelector('.container');
+    const btn = document.querySelector(".task")
+
+    darkModeButton.addEventListener('click', function() {
+       
+        todoList.classList.toggle('dark-list');
+        container.classList.toggle('dark-cont');
+        task.classList.toggle('dark-task')
     });
 });
