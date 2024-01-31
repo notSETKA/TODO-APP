@@ -40,10 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.classList.add("btn")
         btn.textContent = "X";
 
-        // Initially hide the delete button
+        
         btn.style.display = 'none';
 
-        // Attach click event to delete button
+        
         btn.addEventListener('click', function() {
             deleteTask(btn);
         });
@@ -70,13 +70,13 @@ document.addEventListener("DOMContentLoaded", function() {
         if (img.src.includes('unchecked.svg')) {
             img.src = './img/Group 4 (1).svg';
             btn.style.display = 'none';
-            // Apply styles to the task when the image is "./img/Group 4 (1).svg"
+           
             img.nextElementSibling.style.color = '#D1D2DA';
             img.nextElementSibling.style.textDecorationLine = 'line-through';
         } else {
             img.src = './img/unchecked.svg';
             btn.style.display = 'inline-block';
-            // Remove styles when the image is "./img/unchecked.svg"
+            
             img.nextElementSibling.style.color = '';
             img.nextElementSibling.style.textDecorationLine = '';
         }
