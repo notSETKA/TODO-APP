@@ -184,6 +184,7 @@ transition: 1s;
     left: 94%;
     font-size: 15px;
     cursor: pointer;
+    transition: 1s;
 }
 
 .foot-txt{

@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.classList.add("btn");
         btn.textContent = "X";
 
+        btn.style.backgroundColor = isDarkMode ? '#25273D' : '#FFFFFF';
+        btn.style.color = isDarkMode ? '#C8CBE7' : '#25273D';
+
         btn.style.display = 'none';
 
         btn.addEventListener('click', function() {
@@ -54,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
         li.appendChild(span);
         li.appendChild(btn);
 
-       
         li.classList.add('dark-task');
 
         taskList.appendChild(li);
@@ -75,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
         img.src = (img.src.includes('unchecked.svg')) ? './img/Group 4 (1).svg' : './img/unchecked.svg';
         btn.style.display = (img.src.includes('unchecked.svg')) ? 'none' : 'inline-block';
 
-       
         const task = img.parentElement;
         const span = task.querySelector('span');
         span.style.color = isDarkMode ? '#C8CBE7' : '#494C6B';
@@ -86,19 +87,21 @@ document.addEventListener("DOMContentLoaded", function() {
         todoList.classList.toggle('dark-list', isDarkMode);
         container.classList.toggle('dark-cont', isDarkMode);
 
-       
         const tasks = document.querySelectorAll('.task');
         tasks.forEach(task => task.classList.toggle('dark-task'));
 
-       
         const taskTexts = document.querySelectorAll('.task span');
         taskTexts.forEach(text => {
             text.style.color = isDarkMode ? '#C8CBE7' : '#494C6B';
         });
 
-        
         taskInput.style.backgroundColor = isDarkMode ? '#25273D' : '#FFF';
-        taskInput.style.transition = '1s'
+
+        const deleteButtons = document.querySelectorAll('.btn');
+        deleteButtons.forEach(button => {
+            button.style.backgroundColor = isDarkMode ? '#25273D' : '#FFFFFF';
+            button.style.color = isDarkMode ? '#C8CBE7' : '#25273D';
+        });
     }
 
     taskInput.addEventListener('keypress', function(event) {
